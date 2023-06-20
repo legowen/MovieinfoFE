@@ -6,17 +6,42 @@ function getMovies() {
 
     return async (dispatch) => {
 
-        const popularMovieApi = await api.get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+        try{
+            dispatch({ type:"GET_MOVIES_REQUEST" });
 
-        // let url = `https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=1`
-        // let response = await fetch(url)
-        // let data = await response.json()
-
-        // let url2 = 
-        // `https://api.themoviedb.org/3/movie/top_rated?api_key=&language=en-US&page=1`
-        
-        // let url3 = `https://api.themoviedb.org/3/movie/upcoming?api_key=&language=en-US&page=1`
-    }
+            const popularMovieApi = api.get(
+                `/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+            );
+    
+            const topRatedApi = api.get(
+                `/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
+            );
+    
+            const upcomingApi = api.get(
+                `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
+            );
+    
+            let [ popularMovies, topRatedMovies, upcomingMovies ] = await Promise.all
+                ([             
+                    popularMovieApi,
+                    topRatedApi,
+                    upcomingApi, 
+                ]);
+    
+            
+    
+                dispatch ({
+                    type : "GET_MOVIES_SUCCESS", 
+                    payload : { 
+                        popularMovies : popularMovies.data, 
+                        topRatedMovies : topRatedMovies.data,
+                        upcomingMovies : upcomingMovies.data,
+                    },
+                });
+        }catch(error){
+            //Error Handling
+        }
+    };
 }
 
 export const movieAction = {
