@@ -1,4 +1,5 @@
 import React from 'react'
+import { Badge } from 'react-bootstrap';
 
 const MovieCard = ({ item }) => {
 
@@ -13,7 +14,17 @@ const MovieCard = ({ item }) => {
                 ")",
             }}
     >
-        MovieCard
+        <div className='overlay'>
+          <h1>{item.title}</h1>
+          <div>{item.genre_ids.map((id) => (
+            <Badge bg="danger">id</Badge>
+            ))}
+          </div>
+          <div>
+            <span>{item.vote_average}</span>
+            <span>{item.adult ? "R" : "G" }</span>
+          </div>
+        </div>
     </div>
   );
 };
