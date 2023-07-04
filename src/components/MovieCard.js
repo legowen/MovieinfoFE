@@ -17,7 +17,7 @@ const MovieCard = ({ item }) => {
                 ")",
             }}
     >
-        <div className='overlay'>
+        <div className="overlay">
           <h1>{item.title}</h1>
           <div>{item.genre_ids.map((id) => (
               <Badge bg="danger">

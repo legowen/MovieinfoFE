@@ -36,4 +36,4 @@ const MovieSlide = ({ movies }) => {
   )
 }
 
-export default MovieSlide
+export default MovieSlide;
