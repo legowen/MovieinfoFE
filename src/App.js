@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import MovieDetail from './pages/MovieDetail';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
@@ -9,13 +9,16 @@ import Navigation from './components/Navigation';
 
 
 function App() {
+
+  const [navSearch, setNavSearch] = useState(true);
+
   return (
     <div>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home/>}/> 
-        <Route path="/movies" element={<Movies/>}/> 
-        <Route path="/:id" element={<MovieDetail/>}/> 
+        <Route path="/" element={<Home setNavSearch={setNavSearch} />}/> 
+        <Route path="/movies" element={<Movies setNavSearch={setNavSearch}/>}/> 
+        <Route path="/:id" element={<MovieDetail setNavSearch={setNavSearch}/>}/> 
       </Routes>
     </div>
   );
