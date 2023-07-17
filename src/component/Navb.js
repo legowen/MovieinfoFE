@@ -40,10 +40,12 @@ changeLang()
      
       <Container fluid>
         <Navbar.Brand href="#">
-          <img
-            width={100}
-            src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
-          />
+          <Link to="/" style={{ color: "white" }}>
+              <img
+                width={100}
+                src="/logo.png"
+              />
+            </Link>
         </Navbar.Brand>
       
         <Navbar.Toggle aria-controls="navbarScroll" />
