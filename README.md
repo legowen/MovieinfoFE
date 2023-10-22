@@ -1,5 +1,5 @@
 # Netflix 프로젝트
-![](<img width='70%' src="https://github.com/legowen/Portfolio/blob/main/img/dbmoviesinfo.png?raw=true"/>)
+<img width='70%' src="https://github.com/legowen/Portfolio/blob/main/img/dbmoviesinfo.png?raw=true"/>
 * 데모: https://noona-netflix.netlify.app/
 
 ## 사용기술
