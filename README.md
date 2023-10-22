@@ -1,15 +1,16 @@
-# Netflix 프로젝트
+# Movie Database Project
 <img width='70%' src="https://github.com/legowen/Portfolio/blob/main/img/dbmoviesinfo.png?raw=true"/>
-* 데모: https://noona-netflix.netlify.app/
+* Demo: https://dbmoviesinfo.netlify.app
 
-## 사용기술
+## Tech
 * React
 * React Bootstrap
 * Material UI
 
-## 기능
-* 영화 보기 
-* 영화검색
-* 장르별 필터
-* 연도별 필터
-* 정렬 
+## Function
+* Find movie info
+* Search the Movie
+* Language filter
+* Genre Filter
+* Years filter
+* Pagenation
