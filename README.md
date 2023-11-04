@@ -3,9 +3,10 @@
 * Demo: https://dbmoviesinfo.netlify.app
 
 ## Tech
-* React
-* React Bootstrap
-* Material UI
+![React](https://img.shields.io/badge/-React-222222?style=for-the-badge&logo=react)
+![Redux](https://img.shields.io/badge/-Redux-purple?style=for-the-badge&logo=Redux)
+![ReactRouter](https://img.shields.io/badge/-ReactRouter-white?style=for-the-badge&logo=ReactRouter)
+![MUI](https://img.shields.io/badge/-MUI-grey?style=for-the-badge&logo=MUI)
 
 ## Function
 * Find movie info
