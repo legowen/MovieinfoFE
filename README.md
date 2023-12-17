@@ -1,6 +1,7 @@
 # Movie Database Project
 <img width='70%' src="https://github.com/legowen/Portfolio/blob/main/img/dbmoviesinfo.png?raw=true"/>
 * Demo: https://dbmoviesinfo.netlify.app
+(Renewing API Key)
 
 ## Tech
 ![React](https://img.shields.io/badge/-React-222222?style=for-the-badge&logo=react)
